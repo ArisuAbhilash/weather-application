@@ -1,3 +1,51 @@
-<h1>hello world
-    
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="main-container">
+    <form method="POST" class="search-box">
+      <input type="text" name="city" placeholder="Enter city..." required>
+      <button type="submit">Search</button>
+    </form>
+
+    {% if weather %}
+    <div class="weather-card">
+      <div class="header">
+        <h2>{{ weather.city }} ☀️</h2>
+        <p class="time">{{ weather.time }}</p>
+      </div>
+
+      <div class="temp-section">
+        <div class="temp">{{ weather.temp }}°<span class="unit">C</span></div>
+        <div class="description">{{ weather.description }}</div>
+      </div>
+
+      <div class="details">
+        <p>🌧️ Precipitation: {{ weather.precip }}%</p>
+        <p>💧 Humidity: {{ weather.humidity }}%</p>
+        <p>🌬️ Wind: {{ weather.wind }} km/h</p>
+      </div>
+
+      <hr>
+
+      <div class="forecast">
+        {% for day in forecast %}
+        <div class="forecast-day">
+          <p>{{ day.day }}</p>
+          <img src="{{ day.icon }}" alt="icon" />
+          <p>{{ day.temp_min }}° / {{ day.temp_max }}°</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <footer>Coded by Abhilash Maurya</footer>
+  </div>
+</body>
+</html>
