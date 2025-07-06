@@ -1,3 +1,4 @@
+/* === Base styles === */
 body {
   margin: 0;
   padding: 0;
@@ -18,25 +19,30 @@ body {
   width: 90%;
   max-width: 550px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
 }
 
+/* === Search Box === */
 .search-box {
   display: flex;
   gap: 10px;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .search-box input {
-  flex: 1;
+  flex: 1 1 70%;
   padding: 12px;
   font-size: 1rem;
   border: none;
   border-radius: 25px;
   padding-left: 20px;
+  min-width: 200px;
 }
 
 .search-box button {
+  flex: 1 1 20%;
   background: #4b3cc4;
   color: white;
   padding: 12px 20px;
@@ -44,18 +50,21 @@ body {
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
+  min-width: 80px;
 }
 
+/* === Weather Card === */
 .weather-card {
   background: white;
   border-radius: 20px;
   padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+  text-align: center;
 }
 
 .time {
@@ -67,6 +76,7 @@ body {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .description {
@@ -80,18 +90,67 @@ body {
   line-height: 1.6;
 }
 
+/* === Forecast Section === */
 .forecast {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 1.5rem;
+  gap: 10px;
 }
 
 .forecast-day {
+  flex: 1 1 80px;
   text-align: center;
   font-size: 0.9rem;
+  min-width: 70px;
 }
 
 .forecast-day img {
   width: 40px;
   height: 40px;
+}
+
+
+/* === Responsive Adjustments === */
+@media (max-width: 680px) {
+
+  .main-container {
+    background: #f5f8ff;
+    padding: 1rem;
+    border-radius: 25px;
+    width: 400%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+  }
+
+  .temp-section {
+    font-size: 2.5rem;
+  }
+  
+
+  .search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .details {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .forecast-day {
+    flex: 1 1 45%;
+  }
 }
