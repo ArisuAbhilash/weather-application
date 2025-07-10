@@ -16,9 +16,13 @@ A responsive and interactive **Weather Forecast Web Application** built using **
 
 ## 🖼️ Preview
 
-![App Screenshot](static\images\image1.png)
-</br>
-![App Screenshot](static\images\image2.png) <!-- Replace with your image path -->
+<p align="center">
+  <img src="static\images\image1.png" width="600"/>
+  <br/>
+  <img src="static\images\image2.png" width="600"/>
+  <i>Figure 2: UI OF application</i>
+</p>
+ <!-- Replace with your image path -->
 
 ---
 
