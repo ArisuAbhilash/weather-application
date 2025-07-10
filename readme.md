@@ -20,6 +20,7 @@ A responsive and interactive **Weather Forecast Web Application** built using **
   <img src="static\images\image1.png" width="600"/>
   <br/>
   <img src="static\images\image2.png" width="600"/>
+  </br>
   <i>Figure 2: UI OF application</i>
 </p>
  <!-- Replace with your image path -->
