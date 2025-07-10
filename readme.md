@@ -1,3 +1,7 @@
+<div align="right">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=ArisuAbhilash.weather-app&left_color=navy" />
+</div>
+
 # 🌦️ Weather Forecast Web App
 
 A responsive and interactive **Weather Forecast Web Application** built using **Flask**, styled with **HTML/CSS**, and containerized using **Docker**. The application fetches live weather data from a public API and can be deployed locally or on the cloud using **IBM Cloud Container Registry**.
